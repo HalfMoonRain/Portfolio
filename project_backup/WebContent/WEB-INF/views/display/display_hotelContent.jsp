@@ -102,7 +102,7 @@
 						<td>기준 ${tRoom.room_capacity}명 / 최대 ${tRoom.room_capacity + 2}명</td>
 						<td align="right"><fmt:formatNumber value="${tRoom.room_price}" pattern="###,### 원"/></td>
 					</tr>
-					<tr>
+					<tr> 
 						<td>숙박&nbsp;18:00&nbsp;부터</td>
 						<td></td>
 					</tr>
@@ -429,13 +429,51 @@
 			<tr>
 				<td align="center" colspan="2"><a href="review?h_num=${hdto.h_num}">전체 후기 보기</a><br>(후기 ${reviewCount}개)</td>
 			</tr>
-		</table>
+		</table>	
+		<c:if test="${empty loginOkBean}">
+		<div class="row align-center justify-center"> 
+			<div style="text-align:center; position: fixed; bottom: 0; z-index: 9999; width:100%; background-color:#1f244d;">
+        		<i class="fas fa-chevron-left fa-2x" style="color: white; margin-bottom:10px; margin-top: 10px; margin-right: 10px;"
+        		 onclick="window.history.back()"></i>
+        		<i class="fas fa-home fa-2x" style="color: white; margin-bottom:10px; margin-top: 10px; margin-right: 10px;"
+        		 onclick="location.href='main'"></i> 	
+    			<i class="fas fa-chevron-right fa-2x" style="color: white; margin-bottom:10px; margin-top: 10px;"
+        		 onclick="window.history.foward()"></i>
+    		</div> 
+		</div>		
+		</c:if>				
+		<c:if test="${not empty loginOkBean}">
+		<div class="row align-center justify-center"> 
+			<div style="text-align:center; position: fixed; bottom: 0; z-index: 9999; width:100%; background-color:#1f244d;">
+        		<i class="fas fa-chevron-left fa-2x" style="color: white; margin-bottom:10px; margin-top: 10px; margin-right: 10px;"
+        		 onclick="window.history.back()"></i>
+        		<i class="fas fa-address-book fa-2x" style="margin-left:100px; margin-right: 20px; color: white; margin-bottom:10px; margin-top: 10px;" onclick="location.href='user_myPage'"></i>
+        	<c:if test="${bookable_roomCount ne 0}">
+        		<i class="fas fa-credit-card fa-2x" style="margin-right:20px;color: white; margin-bottom:10px" onclick="reservation()"></i>
+			</c:if>
+    			<i class="fas fa-heart fa-2x" style="margin-right:20px;color: white; margin-bottom:10px; margin-top: 10px;" onclick="location.href='user_wishlist'"></i> 
+    			<i class="fas fa-home fa-2x" style="color: white; margin-bottom:10px; margin-top: 10px;" onclick="location.href='main'"></i> 	
+    			<i class="fas fa-chevron-right fa-2x" style="color: white; margin-bottom:10px; margin-top: 10px;"
+        		 onclick="window.history.foward()"></i>
+    		</div>
+		</div>
+		</c:if> 
 	</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 	$(document).ready(function(){
 		let bookingImages = $('#bookingImages').children('img')
 		$(bookingImages).each(function (index, el) {
+			$(this).click(function() {
+				let selectedSrc = $(el).attr('src')
+				$('#selectedImage').attr('src', selectedSrc)
+			})
+		});
+	});
+
+	$(document).ready(function(){
+		let roomcontentImages = $('#roomcontentImages').children('img')
+		$(roomcontentImages).each(function (index, el) {
 			$(this).click(function() {
 				let selectedSrc = $(el).attr('src')
 				$('#selectedImage').attr('src', selectedSrc)
