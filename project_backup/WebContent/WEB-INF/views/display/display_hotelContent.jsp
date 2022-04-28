@@ -471,14 +471,5 @@
 		});
 	});
 
-	$(document).ready(function(){
-		let roomcontentImages = $('#roomcontentImages').children('img')
-		$(roomcontentImages).each(function (index, el) {
-			$(this).click(function() {
-				let selectedSrc = $(el).attr('src')
-				$('#selectedImage').attr('src', selectedSrc)
-			})
-		});
-	});
 </script>
 <%@ include file="../bottom.jsp" %>
