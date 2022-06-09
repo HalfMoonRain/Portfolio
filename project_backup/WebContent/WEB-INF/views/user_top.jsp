@@ -19,6 +19,7 @@
 		<div class="navbar_logo">
 			<i class="fas fa-suitcase"></i>
 			<a style = "color:#FAFAFA;" href="main">Hotel Festival</a>
+			<a href = "portfolio">포폴</a>
 		</div>
 		 
 		<c:if test="${empty loginOkBean}">
