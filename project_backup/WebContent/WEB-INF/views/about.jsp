@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="css/animate.min.css">
 <link rel="stylesheet" href="css/portfolio.css">
 <link rel="stylesheet" href="css/font.css">
- 
+  
 </head>
 <body>
 
