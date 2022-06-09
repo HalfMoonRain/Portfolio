@@ -1,0 +1,175 @@
+body, html {
+  background: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'noto-regular';
+  word-break: keep-all;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+a:link {
+  color: none;
+  text-decoration: none;
+}
+
+a:visited {
+  color: none;
+  text-decoration: none;
+}
+
+a:hover {
+  color: none;
+  text-decoration: none;
+}
+
+#move-top-btn {
+  position: fixed;
+  right: 2%;
+  bottom: 50px;
+  display: none;
+  z-index: 10;
+  color: rgba(133, 179, 118, 0.94);
+  border: 1px solid rgba(133, 179, 118, 0.94);
+  padding: 5px;
+  box-shadow: 1px 1px 1px 1px gray;
+}
+
+/*portfolio HOME background image*/
+.bgimg {
+  border: 0;
+  padding: 0;
+  background-image: url('/project/resources/images/portfolio_bg1.jpg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+/*Top menu css*/
+.top-menu {
+  background: none;
+  border: 0;
+  background: rgba(0, 0, 0, 0.54);
+  border-radius: 0;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: white;
+  font-family: 'noto-medium';
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+  color: rgba(133, 179, 118, 0.94);
+}
+
+.navbar-default .navbar-nav>li>a:focus {
+  color: rgba(133, 179, 118, 0.94);
+}
+
+.navbar-default .navbar-toggle {
+  border-color: white;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: white;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.home-txt {
+  width: 100%;
+  color: white;
+  position: absolute;
+  top: 41%;
+  text-align: center;
+}
+
+/* ABOUT */
+.about-contents-box {
+  margin-top: 50px;
+}
+
+.about-img {
+  max-height: 450px;
+  margin-bottom: 20px;
+}
+
+.about-me {
+  font-size: 1.8rem;
+  word-break: keep-all;
+  line-height: 1.7em;
+}
+
+.about-bottom {
+  margin-top: 20px;
+  font-size: 1.8rem;
+  border-top: 2px solid rgb(112, 109, 109);
+}
+
+.about-bottom div {
+  padding-top: 30px;
+  font-family: 'noto-medium';
+}
+
+.about-bottom p {
+  font-size: 1.6rem;
+  font-family: 'noto-regular';
+  color: rgb(112, 109, 109);
+}
+
+/*Work css*/
+.work-title {
+  font-family: 'noto-medium';
+  margin-bottom: 70px;
+}
+
+span {
+  display: inline-block;
+}
+
+.work .row {
+  margin-top: 40px;
+}
+
+.work .row:last-child {
+  margin-bottom: 50px;
+}
+
+.work .row .col-md-4 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.work .row .col-md-8 span:first-child {
+  font-family: 'noto-medium';
+  font-size: 2.2rem;
+}
+
+.work .row .col-md-8 span:last-child {
+  font-size: 1.7rem;
+  margin-top: 20px;
+  line-height: 1.6em;
+}
+
+.text-muted small {
+  border: 1px solid gray;
+  padding: 1px 5px;
+  border-radius: 10px;
+  margin-right: 1px;
+}
+
+/* USE animate.css */
+/* .ex {
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-iteration-count: 1;
+} */
+.fadeInUp, .fadeIn {
+  animation-duration: 1.5s;
+}

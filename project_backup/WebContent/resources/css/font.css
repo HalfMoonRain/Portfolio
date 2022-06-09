@@ -1,0 +1,34 @@
+@font-face {
+  /*woff,otf,eot같은 파일을 가져와서 HTML+CSS에 사용하기 위함*/
+  font-family: "noto-regular";
+  font-style: normal;
+  src: local("NotoSansKR-Regular"),
+    /*외부폰트말고 내부폰트를 사용하겠다*/ url(/project/resources/font/NotoSansKR-Regular.woff) format("woff"),
+    url(/project/resources/font/NotoSansKR-Regular.otf) format("opentype"), url(/project/resources/font/NotoSansKR-Regular.eot);
+}
+
+@font-face {
+  font-family: "noto-medium";
+  font-style: normal;
+  src: local("NotoSansKR-Medium"), url(/project/resources/font/NotoSansKR-Medium.otf) format("opentype"),
+    url(/project/resources/font/NotoSansKR-Medium.eot);
+}
+
+@font-face {
+  font-family: "dm";
+  font-style: normal;
+  src: local("DMSerifText-Regular"), url(/project/resources/font/DMSerifText-Regular.woff) format("woff"),
+    url(/project/resources/font/DMSerifText-Regular.otf) format("opentype"), url(/project/resources/font/DMSerifText-Regular.eot);
+}
+
+@font-face {
+  font-family: "byulR";
+  font-style: normal;
+  src: local("THEdalbyulR-Regular"), url(/project/resources/font/THEdalbyulR.woff) format("woff"), url(../font/THEdalbyulR.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "byulB";
+  font-style: normal;
+  src: local("THEdalbyulSB-Bold"), url(/project/resources/font/THEdalbyulSB.woff) format("woff"), url(../font/THEdalbyulSB.otf) format("opentype");
+}
